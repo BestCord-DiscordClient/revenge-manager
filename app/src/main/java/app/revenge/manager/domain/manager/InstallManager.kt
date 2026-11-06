@@ -51,7 +51,7 @@ class InstallManager(
     fun uninstall() {
         current?.let {
             val callbackIntent = Intent(context, InstallService::class.java).apply {
-                action = "revenge.actions.ACTION_UNINSTALL"
+                action = "bestcord.actions.ACTION_UNINSTALL"
             }
 
             @SuppressLint("UnspecifiedImmutableFlag")

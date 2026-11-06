@@ -10,7 +10,7 @@ import androidx.core.app.ActivityCompat
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import app.revenge.manager.ui.screen.home.HomeScreen
 import app.revenge.manager.ui.screen.installer.InstallerScreen
-import app.revenge.manager.ui.theme.RevengeManagerTheme
+import app.revenge.manager.ui.theme.BestCordManagerTheme
 import app.revenge.manager.utils.DiscordVersion
 import app.revenge.manager.utils.Intents
 import cafe.adriel.voyager.navigator.Navigator
@@ -38,7 +38,7 @@ class MainActivity : ComponentActivity() {
         }
 
         setContent {
-            RevengeManagerTheme {
+            BestCordManagerTheme {
                 Navigator(screen) {
                     SlideTransition(it)
                 }

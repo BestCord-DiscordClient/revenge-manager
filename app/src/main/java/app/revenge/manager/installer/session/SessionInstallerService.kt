@@ -21,7 +21,7 @@ class InstallService : Service() {
     )
 
     override fun onStartCommand(intent: Intent, flags: Int, startId: Int): Int {
-        val isInstall = intent.action == "revenge.actions.ACTION_INSTALL"
+        val isInstall = intent.action == "bestcord.actions.ACTION_INSTALL"
         when (val statusCode = intent.getIntExtra(PackageInstaller.EXTRA_STATUS, -999)) {
             PackageInstaller.STATUS_PENDING_USER_ACTION -> {
                 @Suppress("DEPRECATION") // No.
@@ -41,10 +41,10 @@ class InstallService : Service() {
 
                     // Send error messages back to the activity for debugging (to be received by InstallerScreen)
                     startActivity(
-                        Intent("revenge.actions.ACTION_INSTALL_FINISHED").apply {
+                        Intent("bestcord.actions.ACTION_INSTALL_FINISHED").apply {
                             setClass(this@InstallService, MainActivity::class.java)
                             addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                            putExtra("revenge.extras.EXTRA_MESSAGE", intent.getStringExtra(PackageInstaller.EXTRA_STATUS_MESSAGE))
+                            putExtra("bestcord.extras.EXTRA_MESSAGE", intent.getStringExtra(PackageInstaller.EXTRA_STATUS_MESSAGE))
                         }
                     )
                 }

@@ -39,7 +39,7 @@ class ManagerApplication : Application() {
         if (prefs.updateDuration != UpdateCheckerDuration.DISABLED) {
             val duration = prefs.updateDuration
             WorkManager.getInstance(applicationContext).enqueueUniquePeriodicWork(
-                "app.revenge.manager.UPDATE_CHECK",
+                "app.bestcord.manager.UPDATE_CHECK",
                 ExistingPeriodicWorkPolicy.KEEP,
                 PeriodicWorkRequestBuilder<UpdateWorker>(duration.time, duration.unit).build()
             )

@@ -33,9 +33,9 @@ class AdvancedSettingsViewModel(
     fun updateCheckerDuration(updateCheckerDuration: UpdateCheckerDuration) {
         val wm = WorkManager.getInstance(context)
         when (updateCheckerDuration) {
-            UpdateCheckerDuration.DISABLED -> wm.cancelUniqueWork("app.revenge.manager.UPDATE_CHECK")
+            UpdateCheckerDuration.DISABLED -> wm.cancelUniqueWork("app.bestcord.manager.UPDATE_CHECK")
             else -> wm.enqueueUniquePeriodicWork(
-                "app.revenge.manager.UPDATE_CHECK",
+                "app.bestcord.manager.UPDATE_CHECK",
                 ExistingPeriodicWorkPolicy.CANCEL_AND_REENQUEUE,
                 PeriodicWorkRequestBuilder<UpdateWorker>(
                     updateCheckerDuration.time,

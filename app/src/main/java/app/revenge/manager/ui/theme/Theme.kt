@@ -14,7 +14,7 @@ import app.revenge.manager.domain.manager.Theme
 import org.koin.androidx.compose.get
 
 @Composable
-fun RevengeManagerTheme(
+fun BestCordManagerTheme(
     content: @Composable () -> Unit
 ) {
     val prefs = get<PreferenceManager>()

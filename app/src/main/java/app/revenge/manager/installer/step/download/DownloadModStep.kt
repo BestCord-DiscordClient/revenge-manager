@@ -6,9 +6,9 @@ import app.revenge.manager.installer.step.download.base.DownloadStep
 import java.io.File
 
 /**
- * Downloads the Revenge XPosed module
+ * Downloads the BestCord XPosed module
  *
- * https://github.com/revenge-mod/revenge-xposed
+ * https://github.com/BestCord-DiscordClient/revenge-xposed
  */
 @Stable
 class DownloadModStep(
@@ -17,7 +17,7 @@ class DownloadModStep(
 
     override val nameRes = R.string.step_dl_mod
 
-    override val downloadFullUrl: String = "https://github.com/revenge-mod/revenge-xposed/releases/latest/download/app-release.apk"
+    override val downloadFullUrl: String = "https://github.com/BestCord-DiscordClient/revenge-xposed/releases/latest/download/app-release.apk"
     override val destination = preferenceManager.moduleLocation
     override val workingCopy = workingDir.resolve("xposed.apk")
 

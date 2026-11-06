@@ -37,7 +37,7 @@ internal class SessionInstaller(private val context: Context) : Installer {
         }
 
         val callbackIntent = Intent(context, InstallService::class.java).apply {
-            action = "revenge.actions.ACTION_INSTALL"
+            action = "bestcord.actions.ACTION_INSTALL"
         }
 
         @SuppressLint("UnspecifiedImmutableFlag")

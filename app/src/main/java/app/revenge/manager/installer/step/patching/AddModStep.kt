@@ -9,7 +9,7 @@ import app.revenge.manager.installer.step.download.DownloadModStep
 import java.io.File
 
 /**
- * Uses LSPatch to inject the Revenge XPosed module into Discord
+ * Uses LSPatch to inject the BestCord XPosed module into Discord
  *
  * @param signedDir The signed apks to patch
  * @param lspatchedDir Output directory for LSPatch
