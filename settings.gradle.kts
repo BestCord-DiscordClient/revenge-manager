@@ -1,4 +1,4 @@
-rootProject.name = "revenge-manager"
+rootProject.name = "bestcord-manager"
 
 pluginManagement {
     repositories {
