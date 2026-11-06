@@ -14,19 +14,19 @@ android {
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "app.revenge.manager"
+        applicationId = "app.bestcord.manager"
         minSdk = 28
         targetSdk = 34
         versionName = version.toString()
         versionCode = versionName!!.removePrefix("v").split("-").first().replace(".", "").toInt()
 
 
-        buildConfigField("String", "MOD_NAME", "\"Revenge\"")
-        buildConfigField("String", "MANAGER_NAME", "\"RevengeManager\"")
-        buildConfigField("String", "REPO", "\"revenge-mod/bundle\"")
-        buildConfigField("String", "ORG_LINK", "\"https://github.com/revenge-mod\"")
-        buildConfigField("String", "INVITE_LINK", "\"https://discord.gg/ddcQf3s2Uq\"")
-        buildConfigField("String", "MODDED_APP_PACKAGE_NAME", "\"app.revenge\"")
+        buildConfigField("String", "MOD_NAME", "\"BestCord\"")
+        buildConfigField("String", "MANAGER_NAME", "\"BestCordManager\"")
+        buildConfigField("String", "REPO", "\"BestCord-DiscordClient/revenge-bundle\"")
+        buildConfigField("String", "ORG_LINK", "\"https://github.com/BestCord-DiscordClient\"")
+        buildConfigField("String", "INVITE_LINK", "\"https://github.com/BestCord-DiscordClient\"")
+        buildConfigField("String", "MODDED_APP_PACKAGE_NAME", "\"app.bestcord\"")
         buildConfigField("int", "MODDED_APP_ICON", "0xFEB23A42")
         buildConfigField("int", "MODDED_APP_ICON_ALPHA", "0xFFFBB33C")
         buildConfigField("int", "MODDED_APP_ICON_OTHER", "0xFFD3575E")
@@ -192,4 +192,3 @@ fun exec(vararg command: String): String? {
 tasks.publish {
     dependsOn("assembleRelease")
 }
-
